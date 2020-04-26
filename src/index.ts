@@ -49,7 +49,7 @@ export default function config<T extends Record<string, ArgInfo>>(info: T, optio
   for(const [key, argInfo] of Object.entries(info)) {
     const value = env[key];
 
-    if (!value) {
+    if (!(key in env)) {
       if (!argInfo.optional) {
         throw new Error(`env[${key}] is not defined`);
       } else if ('default' in argInfo) {
