@@ -8,7 +8,7 @@ is a great boon to your development process.
 
 To get ready to work on the codebase, please do the following:
 
-1. Fork & clone the repository, and make sure you're on the **main** branch
+1. Fork & clone the repository, and make sure you're on the **master** branch
 2. Run `pnpm install --frozen-lockfile`
 3. Code!
 4. Run `node --run check`, `node --run typecheck` and `node --run test`
