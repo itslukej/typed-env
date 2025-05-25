@@ -1,21 +1,14 @@
-# neon-env
+# typed-env
 
-> Basically [typed-env](https://www.npmjs.com/package/typed-env), but with support for choices and maintained.
+[![npm version](https://img.shields.io/npm/v/typed-env.svg?maxAge=3600)](https://npmjs.com/package/typed-env)
+[![monthly downloads](https://img.shields.io/npm/dm/typed-env.svg?maxAge=3600)](https://npmjs.com/package/typed-env)
 
 A typed environment variable parser with support for choices, custom parsers, and more.
-
-## Installation
-
-> Node.js ^14.18.0, v16 or newer is required. [See issue #1](https://github.com/SuperchupuDev/neon-env/issues/1#issuecomment-1296366710).
-
-```sh-session
-npm i neon-env
-```
 
 ## Usage
 
 ```ts
-import { createEnv } from 'neon-env';
+import { createEnv } from 'typed-env';
 
 const env = createEnv({
   PORT: { type: 'number', default: 80 }
@@ -35,7 +28,7 @@ env.PORT; // number
 ### Choices
 
 ```ts
-import { createEnv } from 'neon-env';
+import { createEnv } from 'typed-env';
 
 const env = createEnv({
   NODE_ENV: {
@@ -47,14 +40,12 @@ const env = createEnv({
 env.NODE_ENV; // 'development' | 'production'
 ```
 
-As of 0.2.0, you no longer need to add `as const` to the choices array to get the best type safety.
-
 ### Parser
 
 You can pass a `parser` function to return your own custom type
 
 ```ts
-import { createEnv } from 'neon-env';
+import { createEnv } from 'typed-env';
 
 const env = createEnv({
   HOMEPAGE: { parser: url => new URL(url) }

@@ -1,9 +1,9 @@
 {
-  "name": "neon-env",
-  "version": "0.2.2",
-  "description": "Typed env parser",
+  "name": "typed-env",
+  "version": "2.0.0",
+  "description": "Typed environment variable parser",
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "changelog": "auto-changelog -p --commit-limit false",
     "check": "biome check",
     "format": "biome format --write",
@@ -24,7 +24,10 @@
   "files": [
     "dist"
   ],
-  "author": "Superchupu",
+  "contributors": [
+    "Luke James <me@lukej.me>",
+    "Superchupu"
+  ],
   "license": "MIT",
   "keywords": [
     "environment variables",
@@ -37,12 +40,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SuperchupuDev/neon-env.git"
+    "url": "git+https://github.com/itslukej/typed-env.git"
   },
   "bugs": {
-    "url": "https://github.com/SuperchupuDev/neon-env/issues"
+    "url": "https://github.com/itslukej/typed-env/issues"
   },
-  "homepage": "https://github.com/SuperchupuDev/neon-env#readme",
+  "homepage": "https://github.com/itslukej/typed-env#readme",
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@types/node": "^22.15.21",
